@@ -12,7 +12,7 @@ This project demonstrates my SQL problem-solving skills through the analysis of 
 - **Business Problems:** Solving 20 specific business problems using SQL queries.
 
 ## Database Setup
-
+'''
 CREATE DATABASE zomato_db;'''
 
 -- Zomato Database & Schema Setup
