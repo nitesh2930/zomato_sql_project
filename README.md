@@ -13,7 +13,6 @@ This project demonstrates my SQL problem-solving skills through the analysis of 
 
 ## Database Setup
 
-```sql
 CREATE DATABASE zomato_db;'''
 
 -- Zomato Database & Schema Setup
@@ -89,7 +88,7 @@ ADD CONSTRAINT fk_deliveries_riders
 FOREIGN KEY (rider_id)
 REFERENCES riders(rider_id);
 
-------Data Import--------
+ ##Data Import
 -- 1. Import Customers
 \copy customers(customer_id, customer_name, reg_date) FROM 'data/customers.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',');
 
