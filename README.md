@@ -87,9 +87,11 @@ ALTER TABLE deliveries
 ADD CONSTRAINT fk_deliveries_riders
 FOREIGN KEY (rider_id)
 REFERENCES riders(rider_id);
+```
+## Data Import
 
- ## Data Import
 ```sql
+
 -- 1. Import Customers
 \copy customers(customer_id, customer_name, reg_date) FROM 'data/customers.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',');
 
@@ -105,7 +107,7 @@ REFERENCES riders(rider_id);
 -- 5. Import Deliveries
 \copy deliveries(delivery_id, order_id, delivery_status, delivery_time, rider_id) FROM 'data/deliveries.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',');
 
-
+```
 
 ## DATA CLEANING & INTEGRITY CHECKS (NULL VALUES)
 ```sql
@@ -152,7 +154,7 @@ WHERE order_id IS NULL
    OR delivery_status IS NULL
    OR rider_id IS NULL;
 
-
+```
 ## reports and analysis---
 ```sql
 
@@ -720,7 +722,7 @@ GROUP BY 1
 
 -----------------------------------------------END OF REPORTS------------------------------------------------------------
 
-
+```
 
 
 
