@@ -89,6 +89,7 @@ FOREIGN KEY (rider_id)
 REFERENCES riders(rider_id);
 
  ## Data Import
+```sql
 -- 1. Import Customers
 \copy customers(customer_id, customer_name, reg_date) FROM 'data/customers.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',');
 
@@ -107,7 +108,7 @@ REFERENCES riders(rider_id);
 
 
 ## DATA CLEANING & INTEGRITY CHECKS (NULL VALUES)
--
+```sql
 
 -- 1. Check NULL values in CUSTOMERS table
 SELECT COUNT(*) AS null_count_customers
@@ -153,7 +154,7 @@ WHERE order_id IS NULL
 
 
 ## reports and analysis---
-
+```sql
 
 --Q.1
 --write a query to find the top 5 most frequently ordered dishes by customer called "Arjun Mehta" in the last one year.
